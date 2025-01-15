@@ -1,0 +1,21 @@
+<table class="table">
+
+    <thead class="table-dark">
+        <tr>
+            <th></th>
+            <th>Ürün İsmi</th>
+            <th>Fiyat</th>
+            <th>Stok Adedi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let productTemp of products">
+            <td class="align-middle">
+                <img src="{{productTemp.imageUrl}}" height="50"/>
+            </td>
+            <td class="align-middle"> {{productTemp.name}}</td>
+            <td class="align-middle"> {{productTemp.unitPrice | currency:'₺'}}</td>
+            <td class="align-middle">{{productTemp.unitsInStock}}</td>
+        </tr>
+    </tbody>
+</table>
